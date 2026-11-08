@@ -1,0 +1,28 @@
+:root {
+  --playing-green: #09b01c;
+}
+
+.tabbrowser-tab[soundplaying]:not([muted]) .tab-background {
+  background-color: var(--playing-green) !important;
+  background-image: none !important;
+}
+
+.tabbrowser-tab[soundplaying]:not([muted]) .tab-label,
+.tabbrowser-tab[soundplaying]:not([muted]) .tab-icon-sound {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+/* Active tab gets a darker shade so it still stands out from the rest. */
+.tabbrowser-tab[soundplaying]:not([muted])[selected] .tab-background {
+  background-color: #27ae38 !important;
+}
+
+.tabbrowser-tab[soundplaying][muted] .tab-background {
+  background-color: #1a7325 !important;
+  background-image: none !important;
+}
+
+.tabbrowser-tab[soundplaying][muted] .tab-label {
+  color: #d0d0d0 !important;
+}
